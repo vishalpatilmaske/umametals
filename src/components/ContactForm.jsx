@@ -1,11 +1,35 @@
 import { useState } from 'react';
+import { submitContactRequest } from '../lib/api';
 
 export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    const payload = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      company: formData.get('company') || '',
+      message: formData.get('message'),
+    };
+
+    try {
+      await submitContactRequest(payload);
+      setSubmitted(true);
+      e.target.reset();
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -25,6 +49,11 @@ export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
   return (
     <form className="contact-form" onSubmit={handleSubmit} noValidate>
       <h3 className="contact-form__title">Request A Quote / Inquiry</h3>
+      {error && (
+        <p className="form-error" role="alert">
+          {error}
+        </p>
+      )}
       <div className="form-row">
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
@@ -59,8 +88,8 @@ export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
           placeholder="Describe your project, quantities, materials, tolerances, and delivery timeline..."
         />
       </div>
-      <button type="submit" className="btn btn--primary btn--full">
-        {submitLabel}
+      <button type="submit" className="btn btn--primary btn--full" disabled={loading}>
+        {loading ? 'Submitting...' : submitLabel}
       </button>
     </form>
   );

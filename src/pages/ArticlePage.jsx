@@ -1,17 +1,61 @@
+import { useEffect, useState } from 'react';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { Link, useParams } from 'react-router-dom';
 import { company } from '../data/content';
 import { allBlogArticles } from '../data/innerPages';
+import { fetchBlogBySlug } from '../lib/api';
 import Reveal from '../components/Reveal';
 
 export default function ArticlePage() {
   const { slug } = useParams();
-  const article = allBlogArticles.find((a) => a.slug === slug) || allBlogArticles[0];
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    const loadArticle = async () => {
+      setLoading(true);
+      setNotFound(false);
+
+      try {
+        const blog = await fetchBlogBySlug(slug);
+        setArticle(blog);
+      } catch {
+        const fallback = allBlogArticles.find((a) => a.slug === slug);
+        if (fallback) {
+          setArticle({ ...fallback, content: '' });
+        } else {
+          setNotFound(true);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadArticle();
+  }, [slug]);
 
   usePageMeta(
-    `${article.title} | UMA Metal Craft`,
-    article.excerpt
+    article ? `${article.title} | UMA Metal Craft` : 'Article | UMA Metal Craft',
+    article?.excerpt || 'Industrial manufacturing insights from UMA Metal Craft.'
   );
+
+  if (loading) {
+    return (
+      <div className="container" style={{ padding: '4rem 0' }}>
+        <p>Loading article...</p>
+      </div>
+    );
+  }
+
+  if (notFound || !article) {
+    return (
+      <div className="container" style={{ padding: '4rem 0' }}>
+        <h1>Article not found</h1>
+        <Link to="/blog" className="text-link">Back to Blog</Link>
+      </div>
+    );
+  }
 
   return (
     <article className="page-article">
@@ -41,20 +85,24 @@ export default function ArticlePage() {
         <div className="article-content">
           <Reveal>
             <section>
-              <img src={article.image} alt="" className="article-featured-image" loading="lazy" />
-              <p>
-                This article provides practical guidance for industrial buyers and procurement teams evaluating precision metal manufacturing partners. At {company.shortName}, we apply these principles daily across our Nagpur facility.
-              </p>
-              <p>
-                {article.excerpt} Our engineering team works with clients from initial RFQ through production, ensuring drawings are optimized for manufacturability while meeting tight tolerance requirements.
-              </p>
-              <h2>Key Takeaways for Industrial Buyers</h2>
-              <ul>
-                <li>Understand material specifications and certified stock requirements before placing orders</li>
-                <li>Request material test certificates and inspection reports for critical components</li>
-                <li>Plan lead times based on complexity, material availability, and production volume</li>
-                <li>Engage early with your fabrication partner for design-for-manufacturing feedback</li>
-              </ul>
+              {article.image && (
+                <img src={article.image} alt="" className="article-featured-image" loading="lazy" />
+              )}
+              {article.content ? (
+                <div
+                  className="article-body-html article-content"
+                  dangerouslySetInnerHTML={{ __html: article.content }}
+                />
+              ) : (
+                <>
+                  <p>
+                    This article provides practical guidance for industrial buyers and procurement teams evaluating precision metal manufacturing partners. At {company.shortName}, we apply these principles daily across our Nagpur facility.
+                  </p>
+                  <p>
+                    {article.excerpt} Our engineering team works with clients from initial RFQ through production, ensuring drawings are optimized for manufacturability while meeting tight tolerance requirements.
+                  </p>
+                </>
+              )}
             </section>
           </Reveal>
 

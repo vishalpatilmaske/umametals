@@ -1,9 +1,28 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { blogArticles } from '../../data/content';
+import { fetchBlogs } from '../../lib/api';
 import { ArrowRightIcon, DocumentIcon, DynamicIcon, StarIcon } from '../icons/Icons';
 import Reveal from '../Reveal';
 
 export default function BlogPreview() {
+  const [articles, setArticles] = useState(blogArticles);
+
+  useEffect(() => {
+    const loadBlogs = async () => {
+      try {
+        const blogs = await fetchBlogs();
+        if (blogs.length > 0) {
+          setArticles(blogs.slice(0, 3));
+        }
+      } catch {
+        setArticles(blogArticles);
+      }
+    };
+
+    loadBlogs();
+  }, []);
+
   return (
     <section className="section blog-preview-v2" aria-labelledby="blog-heading">
       <div className="container">
@@ -28,7 +47,7 @@ export default function BlogPreview() {
         </Reveal>
 
         <div className="blog-preview-v2__grid">
-          {blogArticles.map((article, i) => (
+          {articles.map((article, i) => (
             <Reveal
               key={article.slug}
               delay={i * 70}

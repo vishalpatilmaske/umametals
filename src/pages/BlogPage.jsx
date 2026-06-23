@@ -1,25 +1,45 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { Link } from 'react-router-dom';
 import PageHeroDark from '../components/PageHeroDark';
 import Reveal from '../components/Reveal';
 import { allBlogArticles, blogCategories } from '../data/innerPages';
+import { fetchBlogs } from '../lib/api';
 import { ArrowRightIcon, DynamicIcon } from '../components/icons/Icons';
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [articles, setArticles] = useState(allBlogArticles);
+  const [loading, setLoading] = useState(true);
 
   usePageMeta(
     'Industrial Manufacturing Blog | CNC Laser Cutting, Metal Fabrication Guides | UMA Metal Craft',
     'CNC machining guides, metal fabrication tutorials, material selection guides, and manufacturing insights from the factory floor.'
   );
 
-  const filtered = activeCategory === 'All'
-    ? allBlogArticles
-    : allBlogArticles.filter((a) => a.category === activeCategory);
+  useEffect(() => {
+    const loadBlogs = async () => {
+      try {
+        const blogs = await fetchBlogs();
+        if (blogs.length > 0) {
+          setArticles(blogs);
+        }
+      } catch {
+        setArticles(allBlogArticles);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const featured = allBlogArticles.filter((a) => a.featured);
-  const trending = allBlogArticles.filter((a) => a.trending);
+    loadBlogs();
+  }, []);
+
+  const filtered = activeCategory === 'All'
+    ? articles
+    : articles.filter((a) => a.category === activeCategory);
+
+  const featured = articles.filter((a) => a.featured);
+  const trending = articles.filter((a) => a.trending);
 
   return (
     <>
@@ -32,6 +52,10 @@ export default function BlogPage() {
 
       <section className="section inner-section">
         <div className="container">
+          {loading && (
+            <p className="text-muted-sm" style={{ marginBottom: '1rem' }}>Loading articles...</p>
+          )}
+
           <Reveal>
             <div className="blog-filters">
               {blogCategories.map((cat) => (
