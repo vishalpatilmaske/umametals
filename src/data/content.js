@@ -10,23 +10,32 @@ export const company = {
 
 export const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
+  { label: 'About', href: '/about' },
   {
-    label: 'Services',
-    href: '/capabilities',
+    label: 'Products',
+    href: '/products',
     children: [
-      { label: 'CNC Laser Cutting', href: '/capabilities' },
-      { label: 'Metal Fabrication', href: '/capabilities' },
-      { label: 'CNC Machining', href: '/capabilities' },
-      { label: 'Press Machine Work', href: '/capabilities' },
-      { label: 'Sheet Metal Work', href: '/capabilities' },
-      { label: 'Aluminium Fabrication', href: '/capabilities' },
-      { label: 'Die & Tool Making', href: '/capabilities' },
-      { label: 'Machine Job Work', href: '/capabilities' },
+      { label: 'Industrial Components', href: '/products/industrial-components' },
+      { label: 'Gym Equipment', href: '/products/gym-equipment' },
+      { label: 'Aluminium Products', href: '/products/aluminium-products' },
+      { label: 'Automation & Machine Parts', href: '/products/automation-machine-parts' },
+      { label: 'Metal Sheets & Components', href: '/products/metal-sheets-components' },
+      { label: 'Tools, Nuts & Bolts', href: '/products/tools-nuts-bolts' },
     ],
   },
+  {
+    label: 'Calculators',
+    href: '/calculator',
+    children: [
+      { label: 'Laser Cutting Cost', href: '/calculators/laser-cutting-cost' },
+      { label: 'Metal Weight', href: '/calculators/metal-weight' },
+      { label: 'Pipe Weight', href: '/calculators/pipe-weight' },
+      { label: 'Bend Allowance', href: '/calculators/bend-allowance' },
+      { label: 'Unit Converter', href: '/calculators/unit-converter' },
+    ],
+  },
+  { label: 'Capabilities', href: '/capabilities' },
   { label: 'Facilities', href: '/facilities' },
-  { label: 'Projects', href: '/products' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -46,12 +55,30 @@ export const heroStats = [
 ];
 
 export const trustedPartners = [
-  'TATA',
-  'Mahindra',
-  'L&T',
-  'Siemens',
-  'Bosch',
-  'BHEL',
+  {
+    name: 'Tata Motors',
+    logo: '/logos/tata.png',
+  },
+  {
+    name: 'Mahindra',
+    logo: '/logos/mahindra.png',
+  },
+  {
+    name: 'Larsen & Toubro',
+    logo: '/logos/lnt.png',
+  },
+  {
+    name: 'Siemens',
+    logo: '/logos/siemens.png',
+  },
+  {
+    name: 'Bosch',
+    logo: '/logos/bosch.png',
+  },
+  {
+    name: 'BHEL',
+    logo: '/logos/bhel.png',
+  },
 ];
 
 export const heavyIndustryFeatures = [

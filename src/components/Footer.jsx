@@ -67,20 +67,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-
-      <div className="sticky-actions" aria-label="Quick contact actions">
-        <a href={`tel:${company.phone.replace(/\s/g, '')}`} className="sticky-actions__btn">
-          <PhoneIcon size={18} />
-          Call Us
-        </a>
-        <a href={whatsappUrl} className="sticky-actions__btn sticky-actions__btn--whatsapp" target="_blank" rel="noopener noreferrer">
-          <WhatsAppIcon size={18} />
-          WhatsApp Us
-        </a>
-        <Link to="/contact" className="sticky-actions__btn sticky-actions__btn--primary">
-          RFQ Contact
-        </Link>
-      </div>
     </>
   );
 }
