@@ -1,51 +1,88 @@
-# UMA Metal Craft
+# umametal-website
 
-Premium static business website for **UMA METAL CRAFT** — precision metal fabrication and industrial manufacturing, Hingna, Nagpur.
+Public marketing website for **UMA Metal Craft** — precision metal fabrication, industrial components, and engineering tools.
 
-Built with **React + Vite**. Deployable as a static site after build.
+## Tech stack
 
-## Pages
+- React 18 + Vite
+- Tailwind CSS 4
+- React Router
+- Lucide React icons
 
-| Route | Page |
-|-------|------|
-| `/` | Home — hero, trust strip, highlights, blog preview |
-| `/about` | About — company story, why choose us |
-| `/products` | Products — full product range and showcase |
-| `/capabilities` | Capabilities — manufacturing strengths and process |
-| `/contact` | Contact — inquiry form and location |
-| `/blog` | Blog listing |
-| `/blog/precision-sheet-metal-fabrication` | Featured article |
+## Prerequisites
+
+- Node.js 18+
+- [umametal-server](../umametal-server) running for blog and contact features
+
+## Setup
+
+```bash
+npm install
+cp .env.example .env
+```
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_API_BASE_URL` | API server URL (default `http://localhost:5050`) |
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server on port `5173` |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
 ## Development
 
 ```bash
-npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open http://localhost:5173
 
-## Production Build
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home |
+| `/about` | Company overview |
+| `/products` | Product catalog |
+| `/products/*` | Product category pages |
+| `/capabilities` | Manufacturing capabilities |
+| `/facilities` | Facilities |
+| `/calculators/*` | Engineering calculators |
+| `/blog` | Blog listing |
+| `/blog/:slug` | Blog article |
+| `/contact` | Contact form |
+
+## Calculators
+
+- Metal weight
+- Pipe weight
+- Laser cutting cost
+- Bend allowance
+- Unit converter
+
+## Project structure
+
+```
+src/
+├── components/     # Layout, header, footer, sections
+├── pages/          # Route pages and product/calculator views
+├── data/           # Static content
+├── hooks/          # Scroll reveal, page meta
+├── lib/            # API client
+├── styles/         # Component styles
+├── App.jsx
+└── main.jsx
+```
+
+## Production
 
 ```bash
 npm run build
-npm run preview
 ```
 
-Output is in `dist/` — upload to any static host (Netlify, Vercel, GitHub Pages, S3, etc.).
-
-## Features
-
-- React Router for multi-page navigation
-- Mobile-responsive layout with sticky header and mobile menu
-- Scroll reveal animations (respects `prefers-reduced-motion`)
-- Static contact form UI (connect backend/email service for production)
-- SEO meta tags and JSON-LD schema markup
-
-## Tech Stack
-
-- React 18
-- Vite 5
-- React Router 6
-- Plain CSS (no UI framework)
-# umametals
+Deploy the `dist/` folder. Set `VITE_API_BASE_URL` to your production API URL before building.
