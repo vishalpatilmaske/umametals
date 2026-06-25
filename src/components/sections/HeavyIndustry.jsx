@@ -39,10 +39,10 @@ export default function HeavyIndustry() {
 
           <Reveal className="heavy-industry__visual" delay={120}>
             <div className="heavy-industry__img-main">
-              <img src="/assets/factory-wide.jpg" alt="Factory worker operating industrial machinery" loading="lazy" />
+              <img src="/assets/heavy1.png" alt="Factory worker operating industrial machinery" loading="lazy" />
             </div>
             <div className="heavy-industry__img-overlay">
-              <img src="/assets/factory-close.jpg" alt="Close-up of precision metal cutting process" loading="lazy" />
+              <img src="/assets/heavy2.png" alt="Close-up of precision metal cutting process" loading="lazy" />
             </div>
           </Reveal>
         </div>
