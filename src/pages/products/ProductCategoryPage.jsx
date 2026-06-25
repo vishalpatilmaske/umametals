@@ -14,6 +14,23 @@ const iconMap = {
   upload: 'document',
 };
 
+const categorySlugMap = {
+  'Industrial Components': 'industrial-components',
+  'Gym Equipment': 'gym-equipment',
+  'Aluminium Products': 'aluminium-products',
+  'Automation & Machine Parts': 'automation-machine-parts',
+  'Metal Sheets & Components': 'metal-sheets-components',
+  'Tools, Nuts & Bolts': 'tools-nuts-bolts',
+};
+
+const makeSlug = (value = '') =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
 export default function ProductCategoryPage({
   metaTitle,
   metaDescription,
@@ -27,6 +44,8 @@ export default function ProductCategoryPage({
   ctaText,
 }) {
   usePageMeta(metaTitle, metaDescription);
+
+  const categorySlug = categorySlugMap[breadcrumb] || makeSlug(breadcrumb || title);
 
   return (
     <>
@@ -67,29 +86,36 @@ export default function ProductCategoryPage({
       <section className="product-list-section">
         <div className="container">
           <div className="screenshot-product-grid">
-            {products.map((product) => (
-              <article key={product.title} className="screenshot-product-card">
-                <div className="screenshot-product-card__image">
-                  <img src={product.image} alt={product.title} loading="lazy" />
-                </div>
+            {products.map((product) => {
+              const productSlug = product.slug || makeSlug(product.title);
 
-                <div className="screenshot-product-card__body">
-                  <h3>{product.title}</h3>
-                  <p>{product.description}</p>
+              return (
+                <article key={product.title} className="screenshot-product-card">
+                  <div className="screenshot-product-card__image">
+                    <img src={product.image} alt={product.title} loading="lazy" />
+                  </div>
 
-                  <ul>
-                    {product.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
+                  <div className="screenshot-product-card__body">
+                    <h3>{product.title}</h3>
+                    <p>{product.description}</p>
 
-                  <Link to="/contact" className="screenshot-product-card__btn">
-                    View Details
-                    <ArrowRightIcon size={16} />
-                  </Link>
-                </div>
-              </article>
-            ))}
+                    <ul>
+                      {(product.points || []).map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      to={`/products/${categorySlug}/${productSlug}`}
+                      className="screenshot-product-card__btn"
+                    >
+                      View Details
+                      <ArrowRightIcon size={16} />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
 
           <div className="product-bottom-cta">

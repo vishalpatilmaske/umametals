@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import ArticlePage from './pages/ArticlePage';
 import FacilitiesPage from './pages/FacilitiesPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 import IndustrialComponentsPage from './pages/products/IndustrialComponentsPage';
 import GymEquipmentPage from './pages/products/GymEquipmentPage';
@@ -39,6 +40,9 @@ export default function App() {
             <Route path="products/automation-machine-parts" element={<AutomationMachinePartsPage />} />
             <Route path="products/metal-sheets-components" element={<MetalSheetsComponentsPage />} />
             <Route path="products/tools-nuts-bolts" element={<ToolsNutsBoltsPage />} />
+
+            {/* Product details page */}
+            <Route path="products/:categorySlug/:slug" element={<ProductDetailPage />} />
 
             <Route path="calculator" element={<MetalWeightCalculatorPage />} />
             <Route path="calculators/laser-cutting-cost" element={<LaserCuttingCalculatorPage />} />

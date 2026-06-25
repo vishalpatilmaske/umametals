@@ -7,6 +7,8 @@ import CapabilitiesPreview from '../components/sections/CapabilitiesPreview';
 import ProductsPreview from '../components/sections/ProductsPreview';
 import BlogPreview from '../components/sections/BlogPreview';
 import FaqSection from '../components/sections/FaqSection';
+import WhyChooseUs from '../components/sections/WhyChooseUs';
+import ProductShowcase from '../components/sections/ProductShowcase';
 
 export default function HomePage() {
   usePageMeta(
@@ -39,8 +41,8 @@ export default function HomePage() {
       <StatsStrip />
       <TrustedBy />
       <HeavyIndustry />
-      <CapabilitiesPreview />
-      <ProductsPreview />
+          <CapabilitiesPreview />
+      <ProductsPreview />   
       <BlogPreview />
       <FaqSection />
     </>
