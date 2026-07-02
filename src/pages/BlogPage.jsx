@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { Link } from 'react-router-dom';
-import PageHeroDark from '../components/PageHeroDark';
 import Reveal from '../components/Reveal';
 import { blogCategories } from '../data/innerPages';
 import { fetchBlogs } from '../lib/api';
 import { ArrowRightIcon, DynamicIcon } from '../components/icons/Icons';
+import './blogPage.css';
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -35,138 +35,231 @@ export default function BlogPage() {
     loadBlogs();
   }, []);
 
-  const filtered = activeCategory === 'All'
-    ? articles
-    : articles.filter((a) => a.category === activeCategory);
+  const filtered =
+    activeCategory === 'All'
+      ? articles
+      : articles.filter((article) => article.category === activeCategory);
 
-  const featured = articles.filter((a) => a.featured);
-  const trending = articles.filter((a) => a.trending);
+  const featured = articles.filter((article) => article.featured);
+  const trending = articles.filter((article) => article.trending);
 
   return (
     <>
-      <PageHeroDark
-        tag="Engineering Insights"
-        title="Industrial Manufacturing Blog"
-        lead="CNC machining guides, metal fabrication tutorials, material selection guides, and manufacturing insights from the factory floor."
-        actions={false}
-      />
+      <section className="blog-hero">
+        <div className="blog-hero__bg">
+          <img src="/assets/blog.png" alt="Industrial manufacturing blog" />
+        </div>
+        <div className="blog-hero__overlay" />
 
-      <section className="section inner-section">
+        <div className="container blog-hero__inner">
+          <Reveal className="blog-hero__content">
+            <p className="blog-hero__tag">
+              <span /> Engineering Insights
+            </p>
+
+            <h1>
+              Industrial Manufacturing <br />
+              <strong>Blog</strong>
+            </h1>
+
+            <div className="blog-orange-line" />
+
+            <p className="blog-hero__lead">
+              CNC machining guides, metal fabrication tutorials, material
+              selection guides, and manufacturing insights from the factory
+              floor.
+            </p>
+          </Reveal>
+
+          <Reveal delay={100} className="blog-hero__stats">
+            <div className="blog-stat">
+              <strong>{articles.length || '—'}</strong>
+              <span>Total Articles</span>
+            </div>
+
+            <div className="blog-stat">
+              <strong>{featured.length || '—'}</strong>
+              <span>Featured Guides</span>
+            </div>
+
+            <div className="blog-stat">
+              <strong>{blogCategories.length}</strong>
+              <span>Categories</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="blog-section">
         <div className="container">
-          {loading && (
-            <p className="text-muted-sm" style={{ marginBottom: '1rem' }}>Loading articles...</p>
-          )}
+          {loading && <p className="blog-status">Loading articles...</p>}
 
-          {!loading && error && (
-            <p className="text-muted-sm" style={{ marginBottom: '1rem', color: '#b45309' }}>{error}</p>
-          )}
+          {!loading && error && <p className="blog-status blog-status--error">{error}</p>}
 
           {!loading && !error && articles.length === 0 && (
-            <p className="text-muted-sm" style={{ marginBottom: '1rem' }}>No articles published yet. Check back soon.</p>
+            <p className="blog-status">No articles published yet. Check back soon.</p>
           )}
 
-          <Reveal>
-            <div className="blog-filters">
-              {blogCategories.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  className={`blog-filter ${activeCategory === cat ? 'blog-filter--active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                </button>
+          <Reveal className="blog-filter-wrap">
+            {blogCategories.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                className={`blog-filter ${activeCategory === cat ? 'blog-filter--active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </Reveal>
+
+          {featured.length > 0 && (
+            <>
+              <Reveal className="blog-section-header">
+                <p>
+                  <span /> Featured Articles <span />
+                </p>
+                <h2>
+                  Practical Manufacturing <strong>Guides</strong>
+                </h2>
+              </Reveal>
+
+              <div className="blog-featured-grid">
+                {featured.map((article, i) => (
+                  <Reveal
+                    key={article.slug}
+                    delay={i * 50}
+                    className="blog-featured-card"
+                  >
+                    <div className="blog-featured-card__image">
+                      <img src={article.image} alt={article.title} loading="lazy" />
+                    </div>
+
+                    <div className="blog-featured-card__body">
+                      <div className="blog-meta">
+                        <span>{article.category}</span>
+                        <time>{article.date}</time>
+                        <span>{article.readTime}</span>
+                      </div>
+
+                      <h3>
+                        <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+                      </h3>
+
+                      <p>{article.excerpt}</p>
+
+                      <Link to={`/blog/${article.slug}`} className="blog-read-link">
+                        Read Article <ArrowRightIcon size={14} />
+                      </Link>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      {trending.length > 0 && (
+        <section className="blog-process-section">
+          <div className="container">
+            <Reveal className="blog-section-header blog-section-header--dark">
+              <p>
+                <span /> Trending Now <span />
+              </p>
+              <h2>
+                Factory Floor <strong>Insights</strong>
+              </h2>
+            </Reveal>
+
+            <div className="blog-trending-grid">
+              {trending.map((article, i) => (
+                <Reveal key={article.slug} delay={i * 40}>
+                  <Link to={`/blog/${article.slug}`} className="blog-trending-card">
+                    <span className="blog-trending-card__count">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+
+                    <span className="blog-trending-card__category">
+                      {article.category}
+                    </span>
+
+                    <strong>{article.title}</strong>
+
+                    <small>{article.readTime}</small>
+                  </Link>
+                </Reveal>
               ))}
             </div>
-          </Reveal>
-
-          <Reveal delay={60}>
-            <h2 className="section-title-lg" style={{ marginTop: '2rem' }}>Featured Articles</h2>
-          </Reveal>
-          <div className="blog-featured-grid">
-            {featured.map((article, i) => (
-              <Reveal key={article.slug} delay={80 + i * 60} className="blog-card-v2 blog-card-v2--featured">
-                <div className="blog-card-v2__image-wrap">
-                  <img src={article.image} alt="" loading="lazy" />
-                </div>
-                <div className="blog-card-v2__body">
-                  <div className="blog-card-v2__meta">
-                    <span className="blog-card-v2__category">{article.category}</span>
-                    <span className="blog-card-v2__meta-sep">|</span>
-                    <time className="blog-card-v2__date">{article.date}</time>
-                    <span className="blog-card-v2__meta-sep">|</span>
-                    <span className="blog-card-v2__date">{article.readTime}</span>
-                  </div>
-                  <h3 className="blog-card-v2__title">
-                    <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-                  </h3>
-                  <p className="blog-card-v2__excerpt">{article.excerpt}</p>
-                  <Link to={`/blog/${article.slug}`} className="blog-card-v2__link">
-                    Read Article
-                    <ArrowRightIcon size={14} />
-                  </Link>
-                </div>
-              </Reveal>
-            ))}
           </div>
+        </section>
+      )}
 
-          <Reveal delay={60}>
-            <h2 className="section-title-lg" style={{ marginTop: '3rem' }}>Trending Now</h2>
-          </Reveal>
-          <div className="trending-list">
-            {trending.map((article, i) => (
-              <Reveal key={article.slug} delay={i * 40}>
-                <Link to={`/blog/${article.slug}`} className="trending-item">
-                  <span className="trending-item__category">{article.category}</span>
-                  <strong className="trending-item__title">{article.title}</strong>
-                  <span className="trending-item__time">{article.readTime}</span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={60}>
-            <h2 className="section-title-lg" style={{ marginTop: '3rem' }}>
-              All Articles <span className="text-muted-sm">({filtered.length} articles)</span>
+      <section className="blog-section blog-section--muted">
+        <div className="container">
+          <Reveal className="blog-section-header">
+            <p>
+              <span /> All Articles <span />
+            </p>
+            <h2>
+              Latest Manufacturing <strong>Knowledge</strong>
             </h2>
           </Reveal>
+
           <div className="blog-list-grid">
             {filtered.map((article, i) => (
-              <Reveal key={article.slug} delay={i * 30} className="blog-list-item">
-                <div className="blog-list-item__meta">
-                  <span className="blog-card-v2__category-icon">
-                    <DynamicIcon name={article.categoryIcon} size={14} />
+              <Reveal key={article.slug} delay={i * 30} className="blog-list-card">
+                <div className="blog-list-card__meta">
+                  <span className="blog-list-card__icon">
+                    <DynamicIcon name={article.categoryIcon || 'book'} size={14} />
                   </span>
-                  <span className="blog-list-item__category">{article.category}</span>
-                  <span className="blog-list-item__time">{article.readTime}</span>
+
+                  <span>{article.category}</span>
+                  <time>{article.date}</time>
                 </div>
-                <h3 className="blog-list-item__title">
+
+                <h3>
                   <Link to={`/blog/${article.slug}`}>{article.title}</Link>
                 </h3>
-                <p className="blog-list-item__excerpt">{article.excerpt}</p>
-                <div className="blog-list-item__footer">
-                  <time className="blog-list-item__date">{article.date}</time>
-                  <Link to={`/blog/${article.slug}`} className="blog-card-v2__link">
-                    Read
-                    <ArrowRightIcon size={14} />
+
+                <p>{article.excerpt}</p>
+
+                <div className="blog-list-card__footer">
+                  <small>{article.readTime}</small>
+
+                  <Link to={`/blog/${article.slug}`} className="blog-read-link">
+                    Read <ArrowRightIcon size={14} />
                   </Link>
                 </div>
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
 
-          <Reveal delay={80}>
-            <div className="newsletter-block">
-              <h3 className="newsletter-block__title">Get Manufacturing Insights in Your Inbox</h3>
-              <p className="newsletter-block__lead">
-                Subscribe for monthly engineering guides, material updates, and manufacturing tips from our team.
+      <section className="blog-section">
+        <div className="container">
+          <Reveal className="blog-newsletter">
+            <div>
+              <p className="blog-section-tag">
+                <span /> Monthly Updates
               </p>
-              <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                <input type="email" placeholder="Your email address" aria-label="Email address" required />
-                <button type="submit" className="btn btn--primary">Subscribe</button>
-              </form>
-              <p className="newsletter-block__note">No spam. Unsubscribe anytime.</p>
+
+              <h2>
+                Get Manufacturing Insights in <strong>Your Inbox</strong>
+              </h2>
+
+              <p>
+                Subscribe for engineering guides, material updates and
+                manufacturing tips from our team.
+              </p>
             </div>
+
+            <form className="blog-newsletter-form" onSubmit={(e) => e.preventDefault()}>
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit">Subscribe</button>
+              <small>No spam. Unsubscribe anytime.</small>
+            </form>
           </Reveal>
         </div>
       </section>

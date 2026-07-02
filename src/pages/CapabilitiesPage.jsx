@@ -1,159 +1,211 @@
 import { usePageMeta } from '../hooks/usePageMeta';
 import { Link } from 'react-router-dom';
-import PageHeroDark from '../components/PageHeroDark';
 import InnerPageCta from '../components/InnerPageCta';
 import Reveal from '../components/Reveal';
 import {
-  servicesList,
   servicesWhyChoose,
   servicesProcess,
   industriesServed,
-  facilityHighlights,
 } from '../data/innerPages';
+import { capabilityPages } from '../data/capabilityPages';
 import { ArrowRightIcon, DynamicIcon } from '../components/icons/Icons';
+import FactoryFloorSection from '../components/FactoryFloorSection';
+import './capabilitiesPage.css';
+
+const capabilityIconMap = {
+  'cnc-laser-cutting': 'laser',
+  'metal-fabrication': 'welder',
+  'cnc-machining': 'drill',
+  'press-machine-work': 'press',
+  'sheet-metal-work': 'sheets',
+  'aluminium-fabrication': 'aluminium',
+  'die-tool-making': 'mold',
+  'machine-job-work': 'gear',
+  'surface-finishing': 'shieldCheck',
+};
 
 export default function CapabilitiesPage() {
   usePageMeta(
     'CNC Laser Cutting, Metal Fabrication & Machining Services in Nagpur | UMA Metal Craft',
-    'From raw sheet to finished component — CNC laser cutting, press brake forming, VMC machining, MIG/TIG welding, and die making all under one roof.'
+    'From raw sheet to finished component — CNC laser cutting, press brake forming, VMC machining, MIG/TIG welding, die making and machine job work all under one roof.'
   );
 
   return (
     <>
-      <PageHeroDark
-        tag="Nagpur, Maharashtra — Serving All India"
-        title="Industrial Manufacturing Services"
-        lead="From raw sheet to finished component — CNC laser cutting, press brake forming, VMC machining, MIG/TIG welding, and die making all under one roof."
-      />
+      <section className="cap-hero">
+        <div className="cap-hero__bg">
+          <img
+            src="/assets/factory-close.jpg"
+            alt="UMA Metal Craft manufacturing services"
+          />
+        </div>
+        <div className="cap-hero__overlay" />
 
-      <section className="section inner-section">
-        <div className="container">
-          <Reveal className="section-header-block section-header-block--centered">
-            <p className="section-eyebrow section-eyebrow--centered">
-              <span className="section-eyebrow__line" aria-hidden="true" />
-              10 Core Services
-              <span className="section-eyebrow__line" aria-hidden="true" />
+        <div className="container cap-hero__inner">
+          <Reveal className="cap-hero__content">
+            <p className="cap-hero__tag">
+              <span /> Nagpur, Maharashtra — Serving All India
             </p>
-            <h2 className="section-title-lg">Everything You Need <span className="title-accent">Under One Roof</span></h2>
+
+            <h1>
+              Industrial <br />
+              <strong>Manufacturing</strong> Services
+            </h1>
+
+            <div className="cap-orange-line" />
+
+            <p className="cap-hero__lead">
+              From raw sheet to finished component — CNC laser cutting,
+              fabrication, machining, press work, sheet metal work, aluminium
+              fabrication and die tool making under one roof.
+            </p>
+
+            <div className="cap-hero__actions">
+              <Link to="/contact" className="cap-btn cap-btn--primary">
+                Request Quote <ArrowRightIcon size={15} />
+              </Link>
+
+              <Link to="/facilities" className="cap-btn cap-btn--outline">
+                View Facility <ArrowRightIcon size={15} />
+              </Link>
+            </div>
           </Reveal>
-          <div className="service-cards">
-            {servicesList.map((service, i) => (
-              <Reveal key={service.title} delay={i * 40} className="service-card">
-                <span className="icon-circle" aria-hidden="true">
-                  <DynamicIcon name={service.icon} size={22} />
-                </span>
-                <h3 className="service-card__title">{service.title}</h3>
-                <p className="service-card__desc">{service.description}</p>
-                <Link to="/contact" className="service-card__link">
-                  View Details
-                  <ArrowRightIcon size={14} />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+
+          <Reveal delay={100} className="cap-hero__stats">
+            <div className="cap-stat">
+              <strong>{capabilityPages.length}+</strong>
+              <span>Core Services</span>
+            </div>
+
+            <div className="cap-stat">
+              <strong>20K</strong>
+              <span>Sq. Ft Facility</span>
+            </div>
+
+            <div className="cap-stat">
+              <strong>24hr</strong>
+              <span>RFQ Response</span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="section inner-section inner-section--muted">
+      <section className="cap-section">
         <div className="container">
-          <Reveal className="section-header-block section-header-block--centered">
-            <p className="section-eyebrow section-eyebrow--centered">
-              <span className="section-eyebrow__line" aria-hidden="true" />
-              Why B2B Clients Choose UMA
-              <span className="section-eyebrow__line" aria-hidden="true" />
+          <Reveal className="cap-section-header">
+            <p>
+              <span /> Our Capabilities <span />
             </p>
-            <h2 className="section-title-lg">
-              Precision, Scale, and Reliability — <span className="title-accent">Every Order</span>
+            <h2>
+              Complete Manufacturing Support for <strong>B2B Clients</strong>
             </h2>
           </Reveal>
-          <div className="feature-cards">
-            {servicesWhyChoose.map((item, i) => (
-              <Reveal key={item.title} delay={i * 50} className="feature-card">
-                <span className="feature-card__icon" aria-hidden="true">
-                  <DynamicIcon name={item.icon} size={24} />
+
+          <div className="cap-services-grid">
+            {capabilityPages.map((service, i) => (
+              <Reveal
+                key={service.slug}
+                delay={i * 35}
+                className="cap-service-card"
+              >
+                <span className="cap-service-icon">
+                  <DynamicIcon
+                    name={capabilityIconMap[service.slug] || 'factory'}
+                    size={21}
+                  />
                 </span>
-                <h3 className="feature-card__title">{item.title}</h3>
-                <p className="feature-card__desc">{item.description}</p>
+
+                <div>
+                  <h3>{service.title}</h3>
+                  <p>{service.short}</p>
+
+                  <Link to={`/capabilities/${service.slug}`}>
+                    View Details <ArrowRightIcon size={13} />
+                  </Link>
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section inner-section">
+      <section className="cap-section cap-section--muted">
         <div className="container">
-          <Reveal className="section-header-block section-header-block--centered">
-            <p className="section-eyebrow section-eyebrow--centered">
-              <span className="section-eyebrow__line" aria-hidden="true" />
-              Simple &amp; Transparent
-              <span className="section-eyebrow__line" aria-hidden="true" />
+          <Reveal className="cap-section-header">
+            <p>
+              <span /> Why B2B Clients Choose UMA <span />
             </p>
-            <h2 className="section-title-lg">How It Works — <span className="title-accent">From RFQ to Delivery</span></h2>
+            <h2>
+              Precision, Scale, and Reliability — <strong>Every Order</strong>
+            </h2>
           </Reveal>
-          <div className="process-grid">
+
+          <div className="cap-why-grid">
+            {servicesWhyChoose.map((item, i) => (
+              <Reveal key={item.title} delay={i * 40} className="cap-why-card">
+                <span>
+                  <DynamicIcon name={item.icon} size={21} />
+                </span>
+
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="cap-process-section">
+        <div className="container">
+          <Reveal className="cap-section-header cap-section-header--dark">
+            <p>
+              <span /> Simple &amp; Transparent <span />
+            </p>
+            <h2>
+              How It Works — <strong>RFQ to Delivery</strong>
+            </h2>
+          </Reveal>
+
+          <div className="cap-process-grid">
             {servicesProcess.map((step, i) => (
-              <Reveal key={step.step} delay={i * 50} className="process-card">
-                <span className="process-card__step">{step.step}</span>
-                <h3 className="process-card__title">{step.title}</h3>
-                <p className="process-card__desc">{step.description}</p>
+              <Reveal key={step.step} delay={i * 40} className="cap-process-card">
+                <span className="cap-process-step">{step.step}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section inner-section inner-section--muted">
+      <section className="cap-section">
         <div className="container">
-          <Reveal className="section-header-block section-header-block--centered">
-            <p className="section-eyebrow section-eyebrow--centered">
-              <span className="section-eyebrow__line" aria-hidden="true" />
-              Sector Experience
-              <span className="section-eyebrow__line" aria-hidden="true" />
+          <Reveal className="cap-section-header">
+            <p>
+              <span /> Sector Experience <span />
             </p>
-            <h2 className="section-title-lg">Industries <span className="title-accent">We Serve</span></h2>
+            <h2>
+              Industries <strong>We Serve</strong>
+            </h2>
           </Reveal>
-          <div className="industry-tags">
+
+          <div className="cap-industry-tags">
             {industriesServed.map((industry, i) => (
-              <Reveal key={industry.slug} delay={i * 40}>
-                <span className="industry-tag">{industry.name}</span>
+              <Reveal key={industry.slug || industry.name} delay={i * 25}>
+                <span>{industry.name}</span>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section inner-section">
-        <div className="container">
-          <div className="inner-split">
-            <Reveal>
-              <p className="section-eyebrow">
-                <span className="section-eyebrow__line" aria-hidden="true" />
-                See the Facility
-              </p>
-              <h2 className="section-title-lg">
-                State-of-the-Art Manufacturing, <span className="title-accent">Nagpur</span>
-              </h2>
-              <p className="section-lead inner-prose">
-                Our 20,000 sq ft facility houses multiple fibre laser cutters, CNC press brakes, VMC machining centres, and a full welding and surface finishing bay.
-              </p>
-              <ul className="facility-list">
-                {facilityHighlights.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <Link to="/facilities" className="btn btn--primary btn--sm">
-                View Full Gallery
-                <ArrowRightIcon size={16} />
-              </Link>
-            </Reveal>
-            <Reveal delay={100} className="inner-split__visual">
-              <img src="/assets/factory-close.jpg" alt="Manufacturing facility interior" className="inner-image" loading="lazy" />
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      <FactoryFloorSection />
 
-      <InnerPageCta />
+      <InnerPageCta
+        title="Need Custom Manufacturing Support?"
+        lead="Send us your drawings, dimensions, or production requirement. Our team will review and respond with a quotation."
+        primaryLabel="Request a Quote"
+      />
     </>
   );
 }

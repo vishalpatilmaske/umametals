@@ -2,7 +2,7 @@ export const aboutStats = [
   { value: '20,000+', label: 'Sq Ft Facility', description: 'Fully equipped manufacturing floor' },
   { value: '500+', label: 'B2B Clients Served', description: 'Across automotive, construction & more' },
   { value: '10+', label: 'Years Experience', description: 'Precision metal work since 2013' },
-  { value: '100%', label: 'ISO Compliant', description: 'Multi-stage quality inspection' },
+  { value: '100%', label: 'Process Discipline', description: 'Multi-stage quality inspection' },
 ];
 
 export const aboutValues = [
@@ -20,7 +20,7 @@ export const aboutValues = [
   },
   {
     title: 'Quality Assurance',
-    description: 'ISO-compliant inspection at every stage. Our QA team verifies dimensions, surface finish, and material integrity before dispatch.',
+    description: 'Structured inspection at every stage. Our QA team verifies dimensions, surface finish, and material integrity before dispatch.',
   },
 ];
 
@@ -29,24 +29,24 @@ export const aboutMachinery = [
   { title: 'CNC Press Brake', specs: '220 Ton, 4000mm bending length', materials: 'MS, SS, Al up to 12mm' },
   { title: 'VMC Machining Centre', specs: '600×500×500mm travel, 8000 RPM spindle', materials: 'MS, CI, Al, Brass' },
   { title: 'Hydraulic Press', specs: '100 Ton capacity, 300mm stroke', materials: 'Sheet, plate, structural' },
-  { title: 'MIG / TIG Welding', specs: '350A, GMAW/GTAW certified operators', materials: 'MS, SS, Al, Stainless' },
+  { title: 'MIG / TIG Welding', specs: '350A, GMAW/GTAW experienced operators', materials: 'MS, SS, Al, Stainless' },
   { title: 'Surface Grinder', specs: '600×300mm table, 0.001mm resolution', materials: 'All ferrous metals' },
 ];
 
 export const aboutTimeline = [
   { year: '2013', title: 'UMA Metal Craft founded in Nagpur with a single CNC lathe and 2 operators.' },
   { year: '2015', title: 'Expanded to 5,000 sq ft facility. Added first CNC press brake and welding bay.' },
-  { year: '2017', title: 'Entered automotive supply chain. Established quality control lab and ISO standards.' },
+  { year: '2017', title: 'Entered automotive supply chain. Established quality control lab and process standards.' },
   { year: '2019', title: 'Installed first fiber laser cutter — capacity doubles. 100+ B2B clients milestone.' },
   { year: '2021', title: '20,000 sq ft facility inauguration. Added VMC machining center and second laser.' },
   { year: '2023', title: '500+ B2B clients. Expanded to serve clients in Bhopal, Mumbai, Pune, and Hyderabad.' },
 ];
 
 export const aboutCertifications = [
-  { title: 'ISO 9001:2015', subtitle: 'Quality Management' },
+  { title: 'Quality', subtitle: 'Process Reliability' },
   { title: 'MSME', subtitle: 'Registered Enterprise' },
   { title: 'GST', subtitle: 'Registered Manufacturer' },
-  { title: 'Udyam', subtitle: 'Certified Enterprise' },
+  { title: 'Udyam', subtitle: 'Recognized Enterprise' },
 ];
 
 export const servicesList = [
@@ -106,7 +106,7 @@ export const servicesWhyChoose = [
   { icon: 'target', title: 'Tolerances to ±0.1mm', description: 'Our fibre laser and VMC machining hold dimensions your assembly lines can count on.' },
   { icon: 'gear', title: '20,000 Sq Ft Facility', description: 'Laser, press brake, VMC, welding, and finishing all under one roof in Nagpur.' },
   { icon: 'clockFast', title: '3–5 Day Lead Time', description: 'Standard orders completed in 3–5 working days. Express 24–48 hour service available.' },
-  { icon: 'shieldCheck', title: 'ISO 9001 Quality', description: 'Multi-stage inspection, material test certificates, and FAIR reports on request.' },
+  { icon: 'shieldCheck', title: 'Quality', description: 'Multi-stage inspection, material test certificates, and FAIR reports on request.' },
   { icon: 'users', title: '500+ B2B Clients', description: 'Trusted by automotive, construction, gym equipment, and automation industries.' },
   { icon: 'layers', title: 'Prototype to Production', description: 'Same quality from 1-piece prototype to 10,000+ unit monthly production runs.' },
 ];
@@ -132,7 +132,7 @@ export const industriesServed = [
 export const productPageItems = [
   {
     title: 'Aluminium Products',
-    description: 'CNC laser-cut aluminium sheets, plates, extrusions, and custom profiles. Grades 1100 to 7075. IS 737 certified.',
+    description: 'CNC laser-cut aluminium sheets, plates, extrusions, and custom profiles. Grades 1100 to 7075. IS 737 grade material.',
     image: '/assets/products/aluminium.jpg',
     icon: 'layers',
   },
@@ -150,7 +150,7 @@ export const productPageItems = [
   },
   {
     title: 'Metal Sheets & Components',
-    description: 'Laser-cut mild steel, CRCA, and stainless steel sheets to any profile. IS 2062/IS 513 certified material.',
+    description: 'Laser-cut mild steel, CRCA, and stainless steel sheets to any profile. IS 2062/IS 513 grade material.',
     image: '/assets/products/metal-sheets.jpg',
     icon: 'profile',
   },
@@ -180,10 +180,10 @@ export const materialsList = [
 export const productsWhyChoose = [
   { icon: 'target', title: 'Precision to ±0.1mm', description: 'Every laser-cut and machined component meets your DXF drawings with zero rework.' },
   { icon: 'gear', title: 'Integrated Manufacturing', description: 'Cut, bend, weld, machine, and finish under one roof. No sub-contractor delays.' },
-  { icon: 'shieldCheck', title: 'Certified Material', description: 'IS 2062, IS 737, IS 513 certified stock with MTCs available for all material grades.' },
+  { icon: 'shieldCheck', title: 'Material Quality', description: 'IS 2062, IS 737, IS 513 grade stock with MTCs available for all material grades.' },
   { icon: 'clockFast', title: 'Fast Turnaround', description: '3–5 day standard delivery. 24–48 hour express available for urgent requirements.' },
   { icon: 'layers', title: 'Any Volume', description: 'Single prototype pieces to 10,000+ monthly production runs — same quality, consistent pricing.' },
-  { icon: 'award', title: 'ISO 9001 Quality', description: 'Multi-stage inspection at cutting, forming, welding, and final stages before dispatch.' },
+  { icon: 'award', title: 'Quality', description: 'Multi-stage inspection at cutting, forming, welding, and final stages before dispatch.' },
 ];
 
 export const facilityHighlights = [

@@ -26,9 +26,9 @@ const faqItems = [
       'Yes, we accommodate both prototype runs and small batch production. Whether you need a single custom part or a run of 50 units, our flexible manufacturing setup accommodates orders of all sizes.',
   },
   {
-    question: 'Are you ISO certified?',
+    question: 'Do you follow quality standards?',
     answer:
-      'Yes, UMA Metal Craft is ISO 9001:2015 certified. Our quality management system ensures consistent processes, documented procedures, and continuous improvement across all manufacturing operations.',
+      'Yes, UMA Metal Craft is built around rigorous quality processes. Our quality management system ensures consistent processes, documented procedures, and continuous improvement across all manufacturing operations.',
   },
   {
     question: 'Do you provide CAD design services?',

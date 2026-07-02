@@ -13,7 +13,7 @@ import ProductShowcase from '../components/sections/ProductShowcase';
 export default function HomePage() {
   usePageMeta(
     'UMA Metal Craft | Precision CNC Laser Cutting — Nagpur, India',
-    'UMA Metal Craft — precision CNC laser cutting, sheet metal fabrication, and die & tools manufacturing in Nagpur, India. ISO 9001:2015 certified since 2003.'
+    'UMA Metal Craft — precision CNC laser cutting, sheet metal fabrication, and die & tools manufacturing in Nagpur, India. built around rigorous quality processes since 2003.'
   );
 
   return (
@@ -39,11 +39,11 @@ export default function HomePage() {
       />
       <Hero />
       <StatsStrip />
-      <TrustedBy />
       <HeavyIndustry />
           <CapabilitiesPreview />
       <ProductsPreview />   
       <BlogPreview />
+       <TrustedBy />
       <FaqSection />
     </>
   );

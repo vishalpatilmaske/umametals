@@ -57,15 +57,6 @@ export default function Hero() {
                   Get Instant Quote
                   <ArrowRightIcon size={16} />
                 </Link>
-
-                <a
-                  href={`tel:${company.phone.replace(/\s/g, '')}`}
-                  className="hero-btn hero-btn--dark"
-                >
-                  <PhoneIcon size={16} />
-                  Call Now
-                </a>
-
                 <a
                   href={whatsappUrl}
                   className="hero-btn hero-btn--whatsapp"
@@ -92,8 +83,8 @@ export default function Hero() {
           <div className="hero-v2__info-card">
             <div className="hero-v2__card-icon">♢</div>
             <div>
-              <h4>ISO 9001:2015</h4>
-              <p>Certified Company</p>
+              <h4>Quality</h4>
+              <p>Company</p>
             </div>
           </div>
 

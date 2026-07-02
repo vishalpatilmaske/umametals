@@ -17,7 +17,7 @@ const products = [
   {
     title: 'Press Machine Components',
     image: '/assets/products/Press.png',
-    badge: 'ISO',
+    badge: 'Precision',
     description:
       'Custom press machine components including bolsters, die plates, strippers and guide blocks.',
     points: [
@@ -30,7 +30,7 @@ const products = [
   {
     title: 'Pneumatic Fixture Parts',
     image: '/assets/products/Pneumatic.png',
-    badge: 'ISO',
+    badge: 'Precision',
     description:
       'Machined and fabricated pneumatic fixture components for clamps, swing arms and automation fixtures.',
     points: [
@@ -43,7 +43,7 @@ const products = [
   {
     title: 'Custom Stamped Parts',
     image: '/assets/products/Stamped.png',
-    badge: 'ISO',
+    badge: 'Custom',
     description:
       'High-volume stamped and press-formed metal parts in mild steel, stainless steel and aluminium.',
     points: [
@@ -56,7 +56,7 @@ const products = [
   {
     title: 'Die Cast Components',
     image: '/assets/products/DieCast.png',
-    badge: 'ISO',
+    badge: 'Reliable',
     description:
       'Post-machined aluminium and zinc die cast components for industrial and automation assemblies.',
     points: [
@@ -78,7 +78,7 @@ export default function AutomationMachinePartsPage() {
       description="Tight-tolerance machined and fabricated automation parts for pneumatic systems, CNC machinery, and industrial automation applications."
       heroImage="/assets/products/auto-hero.png"
       features={[
-        { icon: 'iso', label: 'ISO Certified Products' },
+        { icon: 'iso', label: 'Precision Products' },
         { icon: 'precision', label: 'Tight Tolerances' },
         { icon: 'custom', label: 'Custom Manufacturing' },
         { icon: 'bulk', label: 'Bulk Orders Supported' },

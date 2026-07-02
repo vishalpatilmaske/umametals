@@ -17,7 +17,7 @@ const products = [
   {
     title: 'Stainless Steel Sheet',
     image: '/assets/products/stainless.png',
-    badge: 'ISO',
+    badge: 'Premium',
     description:
       'SS 304 and SS 316 sheets precision laser-cut with nitrogen assist gas for smooth finish.',
     points: [
@@ -30,7 +30,7 @@ const products = [
   {
     title: 'Galvanized Sheet',
     image: '/assets/products/Galvanized.png',
-    badge: 'ISO',
+    badge: 'Premium',
     description:
       'Hot-dip galvanized and electro-galvanized sheets for corrosion-resistant fabrication needs.',
     points: [
@@ -43,7 +43,7 @@ const products = [
   {
     title: 'Perforated Metal Sheet',
     image: '/assets/products/Perforated.png',
-    badge: 'ISO',
+    badge: 'Custom',
     description:
       'Laser-cut or punched perforated panels in mild steel, stainless steel and aluminium.',
     points: [
@@ -56,7 +56,7 @@ const products = [
   {
     title: 'Checkered Plate (Chequer Plate)',
     image: '/assets/products/Checkered.png',
-    badge: 'ISO',
+    badge: 'Durable',
     description:
       'MS and aluminium chequer plates with raised anti-slip pattern for flooring and platforms.',
     points: [
@@ -78,7 +78,7 @@ export default function MetalSheetsComponentsPage() {
       description="Precision laser-cut metal sheets in mild steel, stainless steel, CRCA and galvanised grades for B2B industrial supply across India."
       heroImage="/assets/products/Checkered.png"
       features={[
-        { icon: 'iso', label: 'IS Certified Material' },
+        { icon: 'iso', label: 'Quality Material' },
         { icon: 'precision', label: 'Laser Cut Precision' },
         { icon: 'custom', label: 'Custom Sizes Available' },
         { icon: 'bulk', label: 'Bulk Orders Supported' },

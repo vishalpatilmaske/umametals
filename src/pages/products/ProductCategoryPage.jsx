@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../../hooks/usePageMeta';
-import './productCategory.css';
 import { ArrowRightIcon, DynamicIcon } from '../../components/icons/Icons';
+import FaqSection from '../../components/sections/FaqSection';
+import BlogPreview from '../../components/sections/BlogPreview';
+import './productCategory.css';
 
 const iconMap = {
   iso: 'shieldCheck',
@@ -49,10 +51,15 @@ export default function ProductCategoryPage({
 
   return (
     <>
-      <section className="product-hero-screen">
-        <div className="container product-hero-screen__inner">
-          <div className="product-hero-screen__content">
-            <div className="product-breadcrumb">
+      <section className="product-cat-hero">
+        <div className="product-cat-hero__bg">
+          <img src={heroImage} alt={title} />
+        </div>
+        <div className="product-cat-hero__overlay" />
+
+        <div className="container product-cat-hero__inner">
+          <div className="product-cat-hero__content">
+            <div className="product-cat-breadcrumb">
               <Link to="/">Home</Link>
               <span>›</span>
               <Link to="/products">Products</Link>
@@ -60,16 +67,22 @@ export default function ProductCategoryPage({
               <span>{breadcrumb}</span>
             </div>
 
-            <p className="product-hero-screen__eyebrow">Our Products</p>
-            <h1>{title}</h1>
-            <p className="product-hero-screen__desc">{description}</p>
+            <p className="product-cat-hero__tag">
+              <span /> Our Products
+            </p>
 
-            <div className="product-hero-features">
+            <h1>{title}</h1>
+
+            <div className="product-cat-orange-line" />
+
+            <p className="product-cat-hero__lead">{description}</p>
+
+            <div className="product-cat-features">
               {features.map((feature) => (
-                <div key={feature.label} className="product-hero-feature">
+                <div key={feature.label} className="product-cat-feature">
                   <DynamicIcon
                     name={iconMap[feature.icon] || 'shieldCheck'}
-                    size={34}
+                    size={22}
                   />
                   <span>{feature.label}</span>
                 </div>
@@ -77,25 +90,45 @@ export default function ProductCategoryPage({
             </div>
           </div>
 
-          <div className="product-hero-screen__image">
-            <img src={heroImage} alt={title} />
+          <div className="product-cat-hero__stats">
+            <div>
+              <strong>{products.length}+</strong>
+              <span>Products</span>
+            </div>
+            <div>
+              <strong>Custom</strong>
+              <span>Sizes Available</span>
+            </div>
+            <div>
+              <strong>24hr</strong>
+              <span>Quote Response</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="product-list-section">
+      <section className="product-cat-section">
         <div className="container">
-          <div className="screenshot-product-grid">
+          <div className="product-cat-section-header">
+            <p>
+              <span /> Product Range <span />
+            </p>
+            <h2>
+              Explore Our <strong>{breadcrumb}</strong>
+            </h2>
+          </div>
+
+          <div className="product-cat-grid">
             {products.map((product) => {
               const productSlug = product.slug || makeSlug(product.title);
 
               return (
-                <article key={product.title} className="screenshot-product-card">
-                  <div className="screenshot-product-card__image">
+                <article key={product.title} className="product-cat-card">
+                  <div className="product-cat-card__image">
                     <img src={product.image} alt={product.title} loading="lazy" />
                   </div>
 
-                  <div className="screenshot-product-card__body">
+                  <div className="product-cat-card__body">
                     <h3>{product.title}</h3>
                     <p>{product.description}</p>
 
@@ -107,10 +140,10 @@ export default function ProductCategoryPage({
 
                     <Link
                       to={`/products/${categorySlug}/${productSlug}`}
-                      className="screenshot-product-card__btn"
+                      className="product-cat-card__btn"
                     >
                       View Details
-                      <ArrowRightIcon size={16} />
+                      <ArrowRightIcon size={15} />
                     </Link>
                   </div>
                 </article>
@@ -118,11 +151,11 @@ export default function ProductCategoryPage({
             })}
           </div>
 
-          <div className="product-bottom-cta">
-            <div className="product-bottom-cta__main">
-              <div className="product-bottom-cta__icon">
-                <DynamicIcon name="document" size={34} />
-              </div>
+          <div className="product-cat-cta">
+            <div className="product-cat-cta__main">
+              <span>
+                <DynamicIcon name="document" size={30} />
+              </span>
 
               <div>
                 <h2>{ctaTitle}</h2>
@@ -130,39 +163,42 @@ export default function ProductCategoryPage({
               </div>
             </div>
 
-            <div className="product-bottom-cta__features">
+            <div className="product-cat-cta__features">
               <div>
-                <DynamicIcon name="headset" size={26} />
+                <DynamicIcon name="headset" size={24} />
                 <strong>Expert Support</strong>
                 <span>Get professional advice</span>
               </div>
 
               <div>
-                <DynamicIcon name="clockFast" size={26} />
+                <DynamicIcon name="clockFast" size={24} />
                 <strong>Quick Response</strong>
                 <span>We reply within 24 hours</span>
               </div>
 
               <div>
-                <DynamicIcon name="shieldCheck" size={26} />
+                <DynamicIcon name="shieldCheck" size={24} />
                 <strong>Best Quality</strong>
                 <span>100% quality assured</span>
               </div>
             </div>
 
-            <div className="product-bottom-cta__actions">
-              <Link to="/contact" className="btn btn--primary">
+            <div className="product-cat-cta__actions">
+              <Link to="/contact" className="product-cat-btn product-cat-btn--primary">
                 Request Custom Quote
-                <ArrowRightIcon size={16} />
+                <ArrowRightIcon size={15} />
               </Link>
 
-              <Link to="/contact" className="btn btn--ghost product-upload-btn">
-                <DynamicIcon name="upload" size={18} />
+              <Link to="/contact" className="product-cat-btn product-cat-btn--outline">
+                <DynamicIcon name="upload" size={17} />
                 Upload Drawing
               </Link>
             </div>
           </div>
         </div>
+
+        <FaqSection />
+        <BlogPreview />
       </section>
     </>
   );

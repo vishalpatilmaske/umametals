@@ -42,7 +42,7 @@ export const navLinks = [
 
 export const heroBadges = [
   { icon: 'target', title: '±0.01mm Precision Accuracy', description: 'High-tolerance manufacturing' },
-  { icon: 'shieldCheck', title: 'ISO 9001:2015 Certified Company', description: 'Quality assured processes' },
+  { icon: 'shieldCheck', title: 'Precision Manufacturing', description: 'Quality assured processes' },
   { icon: 'lightning', title: 'Fast Turnaround On-Time Delivery', description: 'Reliable production schedules' },
 ];
 
@@ -90,7 +90,7 @@ export const heavyIndustryFeatures = [
   {
     icon: 'shieldCheck',
     title: 'Uncompromising Quality',
-    description: 'ISO 9001:2015 certified processes ensuring consistent quality across every production run.',
+    description: 'Quality-focused processes supporting consistent output across every production run.',
   },
   {
     icon: 'clockFast',
@@ -249,8 +249,8 @@ export const faqItems = [
     answer: 'Yes, we accommodate both prototype runs and small batch production. Whether you need a single custom part or a run of 50 units, our flexible manufacturing setup accommodates orders of all sizes.',
   },
   {
-    question: 'Are you ISO certified?',
-    answer: 'Yes, UMA Metal Craft is ISO 9001:2015 certified. Our quality management system ensures consistent processes, documented procedures, and continuous improvement across all manufacturing operations.',
+    question: 'Do you follow quality standards?',
+    answer: 'Yes, UMA Metal Craft is built around rigorous quality processes. Our quality management system ensures consistent processes, documented procedures, and continuous improvement across all manufacturing operations.',
   },
   {
     question: 'Do you provide CAD design services?',
@@ -264,7 +264,7 @@ export const faqItems = [
 
 export const trustFeatures = [
   { icon: 'target', title: 'High Precision', description: '±0.01mm Tolerance' },
-  { icon: 'shieldCheck', title: 'Quality Assured', description: 'ISO 9001:2015 Certified' },
+  { icon: 'shieldCheck', title: 'Quality Controlled', description: 'Precision Built' },
   { icon: 'clockFast', title: 'On-Time Delivery', description: 'Fast & Reliable Service' },
   { icon: 'gears', title: 'Custom Solutions', description: 'Tailored to Your Needs' },
   { icon: 'headset', title: 'Expert Support', description: '24/7 Customer Support' },

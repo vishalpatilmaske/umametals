@@ -17,7 +17,7 @@ const products = [
   {
     title: 'Allen Key / Hex Wrench Set',
     image: '/assets/products/Allen.png',
-    badge: 'ISO',
+    badge: 'Durable',
     description:
       'Industrial-grade CrV steel hex key sets and T-handle hex wrenches for maintenance use.',
     points: [
@@ -30,7 +30,7 @@ const products = [
   {
     title: 'Stainless Steel Screws',
     image: '/assets/products/Screws.png',
-    badge: 'ISO',
+    badge: 'Corrosion Resistant',
     description:
       'A2 SS 304 and A4 SS 316 stainless steel machine screws, self-tapping screws and fasteners.',
     points: [
@@ -43,7 +43,7 @@ const products = [
   {
     title: 'Washers & Lock Nuts',
     image: '/assets/products/Washers.png',
-    badge: 'ISO',
+    badge: 'Secure',
     description:
       'MS, stainless and hardened flat washers, spring washers and locknuts for vibration resistance.',
     points: [
@@ -56,7 +56,7 @@ const products = [
   {
     title: 'Industrial Fasteners Kit',
     image: '/assets/products/Fasteners.png',
-    badge: 'ISO',
+    badge: 'Complete',
     description:
       'Pre-configured industrial fastener kits with assorted bolts, nuts, washers and screws.',
     points: [
@@ -79,7 +79,7 @@ export default function ToolsNutsBoltsPage() {
       heroImage="/assets/products/Allen.png"
       features={[
         { icon: 'precision', label: 'Premium Grade Material' },
-        { icon: 'iso', label: 'ISO Certified' },
+        { icon: 'iso', label: 'Precision Built' },
         { icon: 'custom', label: 'Standard & Custom Sizes' },
         { icon: 'bulk', label: 'Bulk Orders Supported' },
       ]}

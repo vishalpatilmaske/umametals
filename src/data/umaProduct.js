@@ -92,7 +92,7 @@ export const umaProducts = [
       "title": "Aluminium Plates",
       "subtitle": "High quality aluminium plates with excellent strength, corrosion resistance and precision finish.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -157,7 +157,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Raw Material Selection",
         "description": "High quality aluminium is sourced from trusted suppliers and tested for chemical composition and strength.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -193,8 +193,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -284,7 +284,7 @@ export const umaProducts = [
       "title": "Aluminum Sheet",
       "subtitle": "High-quality aluminium sheets for versatile industrial and commercial applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -349,7 +349,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Raw Material Selection",
         "description": "High quality aluminium is sourced from trusted suppliers and tested for chemical composition and strength.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -385,8 +385,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -475,7 +475,7 @@ export const umaProducts = [
       "title": "Aluminum Seedy",
       "subtitle": "Durable seedy aluminium sheets offering slip resistance and high performance.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -540,7 +540,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Raw Material Selection",
         "description": "High quality aluminium is sourced from trusted suppliers and tested for chemical composition and strength.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -576,8 +576,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -666,7 +666,7 @@ export const umaProducts = [
       "title": "Aluminum Rolls",
       "subtitle": "Premium aluminium rolls for manufacturing, fabrication and industrial use.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -731,7 +731,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Raw Material Selection",
         "description": "High quality aluminium is sourced from trusted suppliers and tested for chemical composition and strength.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -767,8 +767,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -857,7 +857,7 @@ export const umaProducts = [
       "title": "Aluminum Dhacha",
       "subtitle": "Strong and reliable aluminium structures for construction and architectural needs.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -922,7 +922,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Raw Material Selection",
         "description": "High quality aluminium is sourced from trusted suppliers and tested for chemical composition and strength.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -958,8 +958,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -1048,7 +1048,7 @@ export const umaProducts = [
       "title": "Power Clamps",
       "subtitle": "Heavy-duty power clamps for reliable workholding in industrial machining and automation applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -1112,8 +1112,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Procurement",
-        "description": "Premium grade metals and alloys sourced from certified suppliers and tested for quality compliance.",
-        "tag": "Quality Assured"
+        "description": "Premium grade metals and alloys sourced from trusted suppliers and tested for quality compliance.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -1149,8 +1149,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -1238,7 +1238,7 @@ export const umaProducts = [
       "title": "Securing Ring",
       "subtitle": "Precision securing rings for reliable shaft retention and bearing locating in industrial machinery.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -1302,8 +1302,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Procurement",
-        "description": "Premium grade metals and alloys sourced from certified suppliers and tested for quality compliance.",
-        "tag": "Quality Assured"
+        "description": "Premium grade metals and alloys sourced from trusted suppliers and tested for quality compliance.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -1339,8 +1339,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -1429,7 +1429,7 @@ export const umaProducts = [
       "title": "Sheet Metal End Cap",
       "subtitle": "Custom sheet metal end caps for tubes, profiles and structural components.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -1493,8 +1493,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Procurement",
-        "description": "Premium grade metals and alloys sourced from certified suppliers and tested for quality compliance.",
-        "tag": "Quality Assured"
+        "description": "Premium grade metals and alloys sourced from trusted suppliers and tested for quality compliance.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -1530,8 +1530,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -1620,7 +1620,7 @@ export const umaProducts = [
       "title": "U Bracket",
       "subtitle": "Heavy-duty U-brackets for structural mounting, support and industrial connections.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -1684,8 +1684,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Procurement",
-        "description": "Premium grade metals and alloys sourced from certified suppliers and tested for quality compliance.",
-        "tag": "Quality Assured"
+        "description": "Premium grade metals and alloys sourced from trusted suppliers and tested for quality compliance.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -1721,8 +1721,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -1811,7 +1811,7 @@ export const umaProducts = [
       "title": "Bearing Cap",
       "subtitle": "Precision bearing caps for housing and protecting bearings in industrial machinery.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -1875,8 +1875,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Procurement",
-        "description": "Premium grade metals and alloys sourced from certified suppliers and tested for quality compliance.",
-        "tag": "Quality Assured"
+        "description": "Premium grade metals and alloys sourced from trusted suppliers and tested for quality compliance.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -1912,8 +1912,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2002,7 +2002,7 @@ export const umaProducts = [
       "title": "Gym Stand",
       "subtitle": "Heavy-duty gym stand for commercial and home gyms — built for strength, stability and durability.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -2067,7 +2067,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Material Selection",
         "description": "Heavy-gauge mild steel / stainless steel pipes and sections are sourced and tested for strength and weldability.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -2078,7 +2078,7 @@ export const umaProducts = [
       {
         "step": "03",
         "title": "Welding & Fabrication",
-        "description": "MIG/TIG welding by certified welders ensures strong joints capable of handling heavy gym loads.",
+        "description": "MIG/TIG welding by skilled welders ensures strong joints capable of handling heavy gym loads.",
         "tag": "Heavy Duty"
       },
       {
@@ -2103,8 +2103,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2192,7 +2192,7 @@ export const umaProducts = [
       "title": "Dumbbell Rack Stand",
       "subtitle": "Organized dumbbell storage rack for gym floors — sturdy, space-efficient and professionally finished.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -2257,7 +2257,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Material Selection",
         "description": "Heavy-gauge mild steel / stainless steel pipes and sections are sourced and tested for strength and weldability.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -2268,7 +2268,7 @@ export const umaProducts = [
       {
         "step": "03",
         "title": "Welding & Fabrication",
-        "description": "MIG/TIG welding by certified welders ensures strong joints capable of handling heavy gym loads.",
+        "description": "MIG/TIG welding by skilled welders ensures strong joints capable of handling heavy gym loads.",
         "tag": "Heavy Duty"
       },
       {
@@ -2293,8 +2293,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2382,7 +2382,7 @@ export const umaProducts = [
       "title": "Barbell Holder Stand",
       "subtitle": "Heavy-duty barbell holder stand for safe, organized storage of barbells in commercial gyms.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -2447,7 +2447,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Material Selection",
         "description": "Heavy-gauge mild steel / stainless steel pipes and sections are sourced and tested for strength and weldability.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -2458,7 +2458,7 @@ export const umaProducts = [
       {
         "step": "03",
         "title": "Welding & Fabrication",
-        "description": "MIG/TIG welding by certified welders ensures strong joints capable of handling heavy gym loads.",
+        "description": "MIG/TIG welding by skilled welders ensures strong joints capable of handling heavy gym loads.",
         "tag": "Heavy Duty"
       },
       {
@@ -2483,8 +2483,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2572,7 +2572,7 @@ export const umaProducts = [
       "title": "Weight Plate Tree Stand",
       "subtitle": "Heavy-duty weight plate tree for organized, accessible and space-saving plate storage in gyms.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -2637,7 +2637,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Material Selection",
         "description": "Heavy-gauge mild steel / stainless steel pipes and sections are sourced and tested for strength and weldability.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -2648,7 +2648,7 @@ export const umaProducts = [
       {
         "step": "03",
         "title": "Welding & Fabrication",
-        "description": "MIG/TIG welding by certified welders ensures strong joints capable of handling heavy gym loads.",
+        "description": "MIG/TIG welding by skilled welders ensures strong joints capable of handling heavy gym loads.",
         "tag": "Heavy Duty"
       },
       {
@@ -2673,8 +2673,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2763,7 +2763,7 @@ export const umaProducts = [
       "title": "Multi-purpose Gym Frame",
       "subtitle": "Versatile multi-purpose gym frame for various training configurations in commercial and home gyms.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -2828,7 +2828,7 @@ export const umaProducts = [
         "step": "01",
         "title": "Material Selection",
         "description": "Heavy-gauge mild steel / stainless steel pipes and sections are sourced and tested for strength and weldability.",
-        "tag": "Quality Assured"
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -2839,7 +2839,7 @@ export const umaProducts = [
       {
         "step": "03",
         "title": "Welding & Fabrication",
-        "description": "MIG/TIG welding by certified welders ensures strong joints capable of handling heavy gym loads.",
+        "description": "MIG/TIG welding by skilled welders ensures strong joints capable of handling heavy gym loads.",
         "tag": "Heavy Duty"
       },
       {
@@ -2864,8 +2864,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -2953,7 +2953,7 @@ export const umaProducts = [
       "title": "Metal Sheet (Mild Steel)",
       "subtitle": "High quality mild steel sheets for structural, fabrication and general industrial applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -3017,8 +3017,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Raw Material Sourcing",
-        "description": "Steel coils and sheets sourced from certified primary producers and tested for chemical and mechanical properties.",
-        "tag": "Quality Assured"
+        "description": "Steel coils and sheets sourced from reliable primary producers and tested for chemical and mechanical properties.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -3054,8 +3054,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -3144,7 +3144,7 @@ export const umaProducts = [
       "title": "Stainless Steel Sheet",
       "subtitle": "Corrosion-resistant stainless steel sheets for industrial, food-grade and architectural applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -3208,8 +3208,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Raw Material Sourcing",
-        "description": "Steel coils and sheets sourced from certified primary producers and tested for chemical and mechanical properties.",
-        "tag": "Quality Assured"
+        "description": "Steel coils and sheets sourced from reliable primary producers and tested for chemical and mechanical properties.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -3245,8 +3245,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -3335,7 +3335,7 @@ export const umaProducts = [
       "title": "Galvanized Sheet",
       "subtitle": "Zinc-coated galvanized steel sheets offering superior corrosion resistance for outdoor and industrial use.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -3399,8 +3399,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Raw Material Sourcing",
-        "description": "Steel coils and sheets sourced from certified primary producers and tested for chemical and mechanical properties.",
-        "tag": "Quality Assured"
+        "description": "Steel coils and sheets sourced from reliable primary producers and tested for chemical and mechanical properties.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -3436,8 +3436,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -3526,7 +3526,7 @@ export const umaProducts = [
       "title": "Perforated Metal Sheet",
       "subtitle": "Precision-perforated metal sheets for filtration, screening, ventilation and decorative applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -3590,8 +3590,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Raw Material Sourcing",
-        "description": "Steel coils and sheets sourced from certified primary producers and tested for chemical and mechanical properties.",
-        "tag": "Quality Assured"
+        "description": "Steel coils and sheets sourced from reliable primary producers and tested for chemical and mechanical properties.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -3627,8 +3627,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -3717,7 +3717,7 @@ export const umaProducts = [
       "title": "Checkered Plate",
       "subtitle": "Anti-slip checkered / tread plates in steel and aluminium for floors, ramps and industrial use.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -3781,8 +3781,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Raw Material Sourcing",
-        "description": "Steel coils and sheets sourced from certified primary producers and tested for chemical and mechanical properties.",
-        "tag": "Quality Assured"
+        "description": "Steel coils and sheets sourced from reliable primary producers and tested for chemical and mechanical properties.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -3818,8 +3818,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -3909,7 +3909,7 @@ export const umaProducts = [
       "title": "Cylinder Automation Parts",
       "subtitle": "Precision machined cylinder automation parts for pneumatic and hydraulic systems.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4010,8 +4010,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -4099,7 +4099,7 @@ export const umaProducts = [
       "title": "Press Machine Components",
       "subtitle": "Heavy-duty press machine components for stamping, forming and punching operations.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4200,8 +4200,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -4288,7 +4288,7 @@ export const umaProducts = [
       "title": "Pneumatic Fixture Parts",
       "subtitle": "Precision pneumatic fixture parts for automated clamping, workholding and assembly systems.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4389,8 +4389,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -4478,7 +4478,7 @@ export const umaProducts = [
       "title": "Custom Stamped Parts",
       "subtitle": "High-volume custom stamped metal parts for automotive, electrical and industrial applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4579,8 +4579,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -4669,7 +4669,7 @@ export const umaProducts = [
       "title": "Die Cast Components",
       "subtitle": "Precision die cast aluminium and zinc components for complex near-net-shape industrial parts.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4770,8 +4770,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -4860,7 +4860,7 @@ export const umaProducts = [
       "title": "Hex Bolts & Nuts Set",
       "subtitle": "High-strength hex bolts and nuts for structural, industrial and general engineering applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -4876,7 +4876,7 @@ export const umaProducts = [
     },
     "overview": {
       "heading": "PRODUCT OVERVIEW",
-      "description": "Our Hex Bolts & Nuts Sets are manufactured to ISO 4014/4016/4032 standards in property classes 4.6, 8.8 and 10.9. Available in carbon steel, alloy steel and stainless steel (SS 304/316) with zinc plated, HDG or plain finish. Suitable for structural steelwork, industrial machinery, automotive and general engineering applications."
+      "description": "Our Hex Bolts & Nuts Sets are manufactured to standard specifications in property classes 4.6, 8.8 and 10.9. Available in carbon steel, alloy steel and stainless steel (SS 304/316) with zinc plated, HDG or plain finish. Suitable for structural steelwork, industrial machinery, automotive and general engineering applications."
     },
     "specifications": [
       {
@@ -4885,7 +4885,7 @@ export const umaProducts = [
       },
       {
         "label": "Standard",
-        "value": "ISO 4014 / DIN 931 / IS 1364 (Bolts) | ISO 4032 / DIN 934 (Nuts)"
+        "value": "DIN 931 / IS 1364 (Bolts) | DIN 934 (Nuts)"
       },
       {
         "label": "Thread",
@@ -4905,7 +4905,7 @@ export const umaProducts = [
       },
       {
         "label": "Proof Load",
-        "value": "As per ISO 898-1 / ISO 898-2"
+        "value": "As per standard specifications"
       },
       {
         "label": "MOQ",
@@ -4913,7 +4913,7 @@ export const umaProducts = [
       },
       {
         "label": "Certifications",
-        "value": "ISO 9001:2015 / Test Certificates available"
+        "value": "Quality / Test Certificates available"
       },
       {
         "label": "Applications",
@@ -4924,8 +4924,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Selection",
-        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from certified mills for quality fasteners.",
-        "tag": "Quality Assured"
+        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from reliable mills for quality fasteners.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -4948,7 +4948,7 @@ export const umaProducts = [
       {
         "step": "05",
         "title": "Thread Gauging & Inspection",
-        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per ISO / DIN / IS standards.",
+        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per standard specifications.",
         "tag": "100% Inspected"
       },
       {
@@ -4961,8 +4961,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -5051,7 +5051,7 @@ export const umaProducts = [
       "title": "Allen Key / Hex Wrench Set",
       "subtitle": "Precision Allen key and hex wrench sets for industrial, automotive and workshop use.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -5096,7 +5096,7 @@ export const umaProducts = [
       },
       {
         "label": "Standard",
-        "value": "DIN 911 / ISO 2936"
+        "value": "DIN 911 / standard spec"
       },
       {
         "label": "Set Packaging",
@@ -5115,8 +5115,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Selection",
-        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from certified mills for quality fasteners.",
-        "tag": "Quality Assured"
+        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from reliable mills for quality fasteners.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -5139,7 +5139,7 @@ export const umaProducts = [
       {
         "step": "05",
         "title": "Thread Gauging & Inspection",
-        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per ISO / DIN / IS standards.",
+        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per standard specifications.",
         "tag": "100% Inspected"
       },
       {
@@ -5152,8 +5152,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -5241,7 +5241,7 @@ export const umaProducts = [
       "title": "Stainless Steel Screws",
       "subtitle": "Corrosion-resistant stainless steel screws for industrial, marine and food-grade applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -5278,7 +5278,7 @@ export const umaProducts = [
       },
       {
         "label": "Standard",
-        "value": "DIN 963 / DIN 965 / DIN 912 / ISO 7380"
+        "value": "DIN 963 / DIN 965 / DIN 912 / standard sizes"
       },
       {
         "label": "Finish",
@@ -5290,7 +5290,7 @@ export const umaProducts = [
       },
       {
         "label": "Certifications",
-        "value": "ISO 9001:2015 / Material Test Certificate"
+        "value": "Quality / Material Test Certificate"
       },
       {
         "label": "Lead Time",
@@ -5305,8 +5305,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Selection",
-        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from certified mills for quality fasteners.",
-        "tag": "Quality Assured"
+        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from reliable mills for quality fasteners.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -5329,7 +5329,7 @@ export const umaProducts = [
       {
         "step": "05",
         "title": "Thread Gauging & Inspection",
-        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per ISO / DIN / IS standards.",
+        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per standard specifications.",
         "tag": "100% Inspected"
       },
       {
@@ -5342,8 +5342,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -5432,7 +5432,7 @@ export const umaProducts = [
       "title": "Washers & Lock Nuts",
       "subtitle": "High-quality washers and lock nuts for vibration-proof, secure fastening in all applications.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -5469,7 +5469,7 @@ export const umaProducts = [
       },
       {
         "label": "Standard",
-        "value": "ISO 7089 / DIN 125 (Flat) | ISO 7042 / DIN 985 (Lock Nuts)"
+        "value": "DIN 125 (Flat) | DIN 985 (Lock Nuts)"
       },
       {
         "label": "Finish",
@@ -5485,7 +5485,7 @@ export const umaProducts = [
       },
       {
         "label": "Certifications",
-        "value": "ISO 9001:2015 / Test Reports available"
+        "value": "Quality / Test Reports available"
       },
       {
         "label": "Applications",
@@ -5496,8 +5496,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Selection",
-        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from certified mills for quality fasteners.",
-        "tag": "Quality Assured"
+        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from reliable mills for quality fasteners.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -5520,7 +5520,7 @@ export const umaProducts = [
       {
         "step": "05",
         "title": "Thread Gauging & Inspection",
-        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per ISO / DIN / IS standards.",
+        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per standard specifications.",
         "tag": "100% Inspected"
       },
       {
@@ -5533,8 +5533,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",
@@ -5624,7 +5624,7 @@ export const umaProducts = [
       "title": "Industrial Fasteners Kit",
       "subtitle": "Comprehensive industrial fasteners kit for maintenance, engineering and production requirements.",
       "badges": [
-        "ISO 9001:2015 Certified",
+        "Precision Built",
         "Custom Manufacturing",
         "Bulk Orders Available",
         "Fast & On-Time Delivery"
@@ -5677,7 +5677,7 @@ export const umaProducts = [
       },
       {
         "label": "Certifications",
-        "value": "ISO 9001:2015"
+        "value": "Quality"
       },
       {
         "label": "Applications",
@@ -5688,8 +5688,8 @@ export const umaProducts = [
       {
         "step": "01",
         "title": "Material Selection",
-        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from certified mills for quality fasteners.",
-        "tag": "Quality Assured"
+        "description": "High-grade carbon steel, alloy steel and stainless steel sourced from reliable mills for quality fasteners.",
+        "tag": "Quality Controlled"
       },
       {
         "step": "02",
@@ -5712,7 +5712,7 @@ export const umaProducts = [
       {
         "step": "05",
         "title": "Thread Gauging & Inspection",
-        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per ISO / DIN / IS standards.",
+        "description": "100% thread gauging using Go / No-Go gauges and dimensional checks per standard specifications.",
         "tag": "100% Inspected"
       },
       {
@@ -5725,8 +5725,8 @@ export const umaProducts = [
     "whyChoose": [
       {
         "number": "01",
-        "title": "Certified Quality",
-        "description": "ISO 9001:2015 certified quality management system ensures consistent quality and customer satisfaction."
+        "title": "Quality",
+        "description": "built around rigorous quality processes quality management system ensures consistent quality and customer satisfaction."
       },
       {
         "number": "02",

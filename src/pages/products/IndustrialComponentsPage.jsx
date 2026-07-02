@@ -43,7 +43,7 @@ export default function IndustrialComponentsPage() {
       description="High precision industrial components engineered for durability, performance and perfect fit in critical applications across various industries."
       heroImage="/assets/products/ind-hero.png"
       features={[
-        { icon: 'iso', label: 'ISO Certified Products' },
+        { icon: 'iso', label: 'Precision Products' },
         { icon: 'custom', label: 'Custom Sizes Available' },
         { icon: 'precision', label: 'Precision Manufactured' },
         { icon: 'bulk', label: 'Bulk Orders Supported' },

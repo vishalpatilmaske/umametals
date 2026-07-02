@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import CapabilitiesPage from './pages/CapabilitiesPage';
+import CapabilityDetailPage from './pages/capabilities/CapabilityDetailPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import ArticlePage from './pages/ArticlePage';
@@ -40,8 +41,6 @@ export default function App() {
             <Route path="products/automation-machine-parts" element={<AutomationMachinePartsPage />} />
             <Route path="products/metal-sheets-components" element={<MetalSheetsComponentsPage />} />
             <Route path="products/tools-nuts-bolts" element={<ToolsNutsBoltsPage />} />
-
-            {/* Product details page */}
             <Route path="products/:categorySlug/:slug" element={<ProductDetailPage />} />
 
             <Route path="calculator" element={<MetalWeightCalculatorPage />} />
@@ -52,6 +51,8 @@ export default function App() {
             <Route path="calculators/unit-converter" element={<UnitConverterPage />} />
 
             <Route path="capabilities" element={<CapabilitiesPage />} />
+            <Route path="capabilities/:slug" element={<CapabilityDetailPage />} />
+
             <Route path="facilities" element={<FacilitiesPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="blog" element={<BlogPage />} />

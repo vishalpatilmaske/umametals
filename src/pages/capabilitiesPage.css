@@ -1,0 +1,529 @@
+.cap-hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  background: #05080c;
+  color: #fff;
+  padding: 120px 0 48px;
+}
+
+.cap-hero__bg,
+.cap-hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.cap-hero__bg {
+  z-index: 1;
+}
+
+.cap-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.cap-hero__overlay {
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 12, 0.96) 0%, rgba(5, 8, 12, 0.9) 28%, rgba(5, 8, 12, 0.58) 58%, rgba(5, 8, 12, 0.28) 100%),
+    linear-gradient(180deg, rgba(5, 8, 12, 0.18) 0%, rgba(5, 8, 12, 0.82) 100%);
+}
+
+.cap-hero__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.cap-hero__content {
+  max-width: 690px;
+}
+
+.cap-hero__tag,
+.cap-section-tag,
+.cap-section-header p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ff6500;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cap-hero__tag {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 22px;
+}
+
+.cap-hero__tag span,
+.cap-section-tag span,
+.cap-section-header p span {
+  width: 36px;
+  height: 2px;
+  background: #ff6500;
+}
+
+.cap-hero h1 {
+  margin: 0;
+  font-size: clamp(38px, 4.4vw, 58px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.cap-hero h1 strong,
+.cap-section-header h2 strong,
+.cap-facility-content h2 strong {
+  color: #ff6500;
+}
+
+.cap-orange-line {
+  width: 52px;
+  height: 3px;
+  margin: 22px 0;
+  background: #ff6500;
+}
+
+.cap-hero__lead {
+  max-width: 610px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.cap-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cap-btn {
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 0.22s ease;
+}
+
+.cap-btn--primary {
+  background: #ff6500;
+  color: #fff;
+}
+
+.cap-btn--outline {
+  color: #ff6500;
+  border: 1.5px solid #ff6500;
+  background: transparent;
+}
+
+.cap-btn:hover {
+  transform: translateY(-1px);
+}
+
+.cap-hero__stats {
+  margin-top: 42px;
+  max-width: 820px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(17, 24, 39, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cap-stat {
+  padding: 20px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cap-stat:last-child {
+  border-right: 0;
+}
+
+.cap-stat strong {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.cap-stat span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+}
+
+/* COMMON SECTIONS */
+
+.cap-section,
+.cap-facility-section,
+.cap-process-section {
+  padding: 64px 0;
+}
+
+.cap-section {
+  background: #fff;
+}
+
+.cap-section--muted {
+  background: #fafafa;
+}
+
+.cap-section-header {
+  max-width: 960px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.cap-section-header p {
+  justify-content: center;
+  margin: 0 0 16px;
+}
+
+.cap-section-header h2,
+.cap-facility-content h2 {
+  margin: 0;
+  color: #0f1720;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.cap-section-header--dark h2 {
+  color: #fff;
+}
+
+/* SERVICES */
+
+.cap-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.cap-service-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  transition: 0.22s ease;
+}
+
+.cap-service-card:hover {
+  border-color: rgba(255, 101, 0, 0.32);
+  transform: translateY(-2px);
+}
+
+.cap-service-icon,
+.cap-why-card span {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ff6500;
+  background: #090909;
+}
+
+.cap-service-card h3,
+.cap-why-card h3,
+.cap-process-card h3 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.cap-service-card p,
+.cap-why-card p,
+.cap-process-card p,
+.cap-facility-content p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.cap-service-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #ff6500;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* WHY */
+
+.cap-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cap-why-card {
+  min-height: 220px;
+  padding: 26px 24px 22px;
+  border-radius: 14px;
+  background: #fff;
+  border-top: 2px solid #ff6500;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.cap-why-card span {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 18px;
+}
+
+.cap-why-card h3 {
+  font-size: 19px;
+}
+
+.cap-why-card p {
+  font-size: 13.5px;
+}
+
+/* PROCESS */
+
+.cap-process-section {
+  background:
+    radial-gradient(circle at 0% 16%, rgba(255, 101, 0, 0.08), transparent 24%),
+    #05080c;
+}
+
+.cap-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.cap-process-card {
+  min-height: 190px;
+  padding: 24px;
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cap-process-step {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: #ff6500;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.cap-process-card h3 {
+  color: #fff;
+  font-size: 17px;
+}
+
+.cap-process-card p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13.5px;
+}
+
+/* INDUSTRIES */
+
+.cap-industry-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cap-industry-tags span {
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  color: #111827;
+  font-size: 13.5px;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+/* FACILITY */
+
+.cap-facility-section {
+  background: #fafafa;
+}
+
+.cap-facility-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.cap-section-tag {
+  margin: 0 0 20px;
+}
+
+.cap-facility-content p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cap-facility-content ul {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.cap-facility-content li {
+  position: relative;
+  padding-left: 24px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.cap-facility-content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6500;
+}
+
+.cap-facility-image img {
+  width: 100%;
+  height: 480px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .cap-hero {
+    padding: 125px 0 55px;
+    min-height: auto;
+  }
+
+  .cap-hero h1 {
+    font-size: 52px;
+  }
+
+  .cap-hero__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cap-services-grid,
+  .cap-why-grid,
+  .cap-process-grid,
+  .cap-facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cap-process-grid {
+    gap: 16px;
+  }
+
+  .cap-facility-image img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cap-hero {
+    padding: 110px 0 42px;
+  }
+
+  .cap-hero h1 {
+    font-size: 42px;
+  }
+
+  .cap-hero__lead {
+    font-size: 15px;
+  }
+
+  .cap-hero__stats {
+    grid-template-columns: 1fr;
+    margin-top: 36px;
+  }
+
+  .cap-stat {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 20px;
+  }
+
+  .cap-stat:last-child {
+    border-bottom: 0;
+  }
+
+  .cap-section,
+  .cap-facility-section,
+  .cap-process-section {
+    padding: 58px 0;
+  }
+
+  .cap-section-header h2,
+  .cap-facility-content h2 {
+    font-size: 34px;
+  }
+
+  .cap-services-grid {
+    gap: 14px;
+  }
+
+  .cap-service-card {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .cap-service-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cap-hero__actions {
+    flex-direction: column;
+  }
+
+  .cap-btn {
+    justify-content: center;
+  }
+
+  .cap-facility-image img {
+    height: 340px;
+  }
+}

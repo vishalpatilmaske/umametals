@@ -23,6 +23,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { umaProducts } from '../data/umaProduct';
+        import FaqSection from '../components/sections/FaqSection';
 import './productDetailPage.css';
 
 const specIcons = {
@@ -134,7 +135,7 @@ export default function ProductDetailPage() {
 
             <div className="pdp-hero__float pdp-hero__float--top">
               <ShieldCheck size={20} />
-              <span>ISO Certified</span>
+              <span>Precision Built</span>
             </div>
 
             <div className="pdp-hero__float pdp-hero__float--bottom">
@@ -239,8 +240,8 @@ export default function ProductDetailPage() {
             <div className="pdp-dark-band__cert">
               <Award size={30} />
               <div>
-                <h3>ISO 9001:2015</h3>
-                <p>Certified Company</p>
+                <h3>Quality</h3>
+                <p>Company</p>
               </div>
             </div>
           </div>
@@ -329,6 +330,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+  
+            <FaqSection/>
     </main>
   );
 }

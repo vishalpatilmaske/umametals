@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { ArrowRight, LockKeyhole } from 'lucide-react';
 import { submitContactRequest } from '../lib/api';
 
-export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
+export default function ContactForm({ submitLabel = 'Send Inquiry' }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -12,12 +13,14 @@ export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
     setLoading(true);
 
     const formData = new FormData(e.target);
+
     const payload = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
+      firstName: formData.get('fullName'),
+      lastName: '',
       email: formData.get('email'),
       phone: formData.get('phone'),
       company: formData.get('company') || '',
+      requirement: formData.get('requirement'),
       message: formData.get('message'),
     };
 
@@ -37,9 +40,10 @@ export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
       <div className="form-success" role="status">
         <h3>Inquiry Received</h3>
         <p>
-          Thank you for your message. Our engineering team will review your requirements and respond within 24 hours.
+          Thank you for your message. Our engineering team will review your
+          requirements and respond within 24 hours.
         </p>
-        <button type="button" className="btn btn--outline btn--sm" onClick={() => setSubmitted(false)}>
+        <button type="button" onClick={() => setSubmitted(false)}>
           Send Another Inquiry
         </button>
       </div>
@@ -47,50 +51,108 @@ export default function ContactForm({ submitLabel = 'Submit Inquiry' }) {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <h3 className="contact-form__title">Request A Quote / Inquiry</h3>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <h3>Request a Quote / Inquiry</h3>
+      <div className="contact-form-line" />
+
       {error && (
         <p className="form-error" role="alert">
           {error}
         </p>
       )}
+
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" required placeholder="First name" />
+          <label htmlFor="fullName">
+            Full Name <strong>*</strong>
+          </label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            required
+            placeholder="Enter your full name"
+          />
         </div>
+
         <div className="form-group">
-          <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required placeholder="Last name" />
+          <label htmlFor="company">Company Name</label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            placeholder="Enter your company name"
+          />
         </div>
       </div>
+
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="you@company.com" />
+          <label htmlFor="email">
+            Email Address <strong>*</strong>
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="Enter your email address"
+          />
         </div>
+
         <div className="form-group">
-          <label htmlFor="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+91" />
+          <label htmlFor="phone">
+            Phone Number <strong>*</strong>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            placeholder="Enter your phone number"
+          />
         </div>
       </div>
+
       <div className="form-group">
-        <label htmlFor="company">Company Name (Optional)</label>
-        <input type="text" id="company" name="company" placeholder="Company name" />
+        <label htmlFor="requirement">
+          Requirement / Service <strong>*</strong>
+        </label>
+        <select id="requirement" name="requirement" required defaultValue="">
+          <option value="" disabled>
+            Select your requirement
+          </option>
+          <option value="CNC Laser Cutting">CNC Laser Cutting</option>
+          <option value="Metal Fabrication">Metal Fabrication</option>
+          <option value="CNC Machining">CNC Machining</option>
+          <option value="Press Machine Work">Press Machine Work</option>
+          <option value="Aluminium Fabrication">Aluminium Fabrication</option>
+          <option value="Other Requirement">Other Requirement</option>
+        </select>
       </div>
+
       <div className="form-group">
-        <label htmlFor="message">Project Details &amp; Requirements</label>
+        <label htmlFor="message">
+          Message / Project Details <strong>*</strong>
+        </label>
         <textarea
           id="message"
           name="message"
           rows="5"
           required
-          placeholder="Describe your project, quantities, materials, tolerances, and delivery timeline..."
+          placeholder="Please share details about your project or requirement..."
         />
       </div>
-      <button type="submit" className="btn btn--primary btn--full" disabled={loading}>
-        {loading ? 'Submitting...' : submitLabel}
+
+      <button type="submit" className="contact-submit-btn" disabled={loading}>
+        {loading ? 'Sending...' : submitLabel}
+        <ArrowRight size={22} />
       </button>
+
+      <p className="contact-secure">
+        <LockKeyhole size={15} />
+        Your information is secure and will not be shared.
+      </p>
     </form>
   );
 }

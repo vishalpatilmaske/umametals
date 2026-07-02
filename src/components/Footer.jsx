@@ -1,72 +1,124 @@
 import { Link } from 'react-router-dom';
 import { company, productCategories } from '../data/content';
-import { PhoneIcon, WhatsAppIcon } from './icons/Icons';
 import Logo from './Logo';
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaArrowRight,
+} from 'react-icons/fa';
+import {
+  GiLaserPrecision,
+  GiMetalBar,
+  GiMechanicalArm,
+} from 'react-icons/gi';
+import { MdOutlinePrecisionManufacturing } from 'react-icons/md';
+import { TbTools } from 'react-icons/tb';
+import './footer.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const whatsappUrl = `https://wa.me/${company.whatsapp.replace(/\D/g, '')}`;
+
+  const services = [
+    ['CNC Laser Cutting', GiLaserPrecision],
+    ['Metal Fabrication', GiMetalBar],
+    ['CNC Machining', GiMechanicalArm],
+    ['Press Machine Work', MdOutlinePrecisionManufacturing],
+    ['Aluminium Fabrication', TbTools],
+  ];
 
   return (
-    <>
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Link to="/" className="footer-logo" aria-label="UMA Metal Craft — Home">
-                <Logo />
-              </Link>
-              <p className="footer-tagline">
-                Precision CNC laser cutting, sheet metal fabrication, and die &amp; tools manufacturing — built for strength, fit, and long-term performance since {company.established}.
-              </p>
-            </div>
+    <footer className="site-footer">
+      <div className="footer-container">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo" aria-label="UMA Metal Craft">
+              <Logo />
+            </Link>
 
-            <div className="footer-col">
-              <h3 className="footer-heading">Quick Links</h3>
-              <ul className="footer-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/capabilities">Services</Link></li>
-                <li><Link to="/facilities">Facilities</Link></li>
-                <li><Link to="/products">Projects</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-              </ul>
-            </div>
+            <p>
+              Precision CNC laser cutting, sheet metal fabrication, and die
+              tools manufacturing — built for strength, fit, and long-term
+              performance since {company.established}.
+            </p>
 
-            <div className="footer-col">
-              <h3 className="footer-heading">Product Range</h3>
-              <ul className="footer-links">
-                {productCategories.slice(0, 5).map((cat) => (
-                  <li key={cat.title}>
-                    <Link to="/products">{cat.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="footer-col">
-              <h3 className="footer-heading">Contact</h3>
-              <p className="footer-inquiry">
-                <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phone}</a>
-                <br />
-                <a href={`mailto:${company.email}`}>{company.email}</a>
-              </p>
-              <Link to="/contact" className="btn btn--outline btn--sm">
-                Request a Quote
-              </Link>
-              <address className="footer-address">
-                Nagpur, Maharashtra, India
-              </address>
+            <div className="footer-socials">
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
             </div>
           </div>
 
-          <div className="footer-bottom">
-            <p>&copy; {currentYear} {company.name}. All rights reserved.</p>
-            <p className="footer-meta">Precision Manufacturing · Nagpur, India</p>
+          <div className="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              {[
+                ['Home', '/'],
+                ['About Us', '/about'],
+                ['Services', '/capabilities'],
+                ['Facilities', '/facilities'],
+                ['Products', '/products'],
+                ['Blog', '/blog'],
+                ['Contact', '/contact'],
+              ].map(([label, path]) => (
+                <li key={label}>
+                  <FaArrowRight />
+                  <Link to={path}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Services</h3>
+            <ul>
+              {services.map(([label, Icon]) => (
+                <li key={label}>
+                  <Icon />
+                  <Link to="/capabilities">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer-col footer-contact">
+            <h3>Contact</h3>
+
+            <div className="footer-contact-item">
+              <FaMapMarkerAlt />
+              <span>Hingna, Nagpur, Maharashtra</span>
+            </div>
+
+            <div className="footer-contact-item">
+              <FaPhoneAlt />
+              <a href={`tel:${company.phone.replace(/\s/g, '')}`}>
+                {company.phone}
+              </a>
+            </div>
+
+            <div className="footer-contact-item">
+              <FaEnvelope />
+              <a href={`mailto:${company.email}`}>{company.email}</a>
+            </div>
+
+            <Link to="/contact" className="footer-quote-btn">
+              Request Quote
+            </Link>
           </div>
         </div>
-      </footer>
-    </>
+
+        <div className="footer-bottom">
+          <p>© {currentYear} {company.name}. All rights reserved.</p>
+
+          <div>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-and-conditions">Terms</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
