@@ -28,7 +28,12 @@ import UnitConverterPage from './pages/calculator/UnitConverterPage';
 export default function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />

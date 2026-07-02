@@ -13,10 +13,14 @@ export default function ContactForm({ submitLabel = 'Send Inquiry' }) {
     setLoading(true);
 
     const formData = new FormData(e.target);
+    const fullName = (formData.get('fullName') || '').trim();
+    const nameParts = fullName.split(/\s+/);
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ');
 
     const payload = {
-      firstName: formData.get('fullName'),
-      lastName: '',
+      firstName,
+      lastName,
       email: formData.get('email'),
       phone: formData.get('phone'),
       company: formData.get('company') || '',
